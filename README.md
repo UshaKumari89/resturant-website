@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+## Bakgrund och krav
+Som fullstackprojekt ska du bygga en webbsida för en restaurang. Det ska vara en restaurang som erbjuder take away, du bestämmer vilken sorts mat och dryck restaurangen erbjuder. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Restaurangens kunder ska kunna använda webbsidan för att:
+läsa menyn
+göra en take away-beställning
 
-## Available Scripts
+Restaurangens anställda ska kunna använda webbsidan för att:
+se inlagda beställningar
+Du har alltså två olika sorters användare: kunder och anställda.
 
-In the project directory, you can run:
+## Tekniska krav
+Användning av Git och GitHub för versionshantering enligt feature branch workflow .
+Arbeta agilt enligt scrum
+UI och UX-design utifrån Design Thinking Process. 
+Användning av React (frontend).
+Användning av Sass.
+Användning av Node.js och Express eller AWS för din backend.
+Publicera projektet online, till exempel på GitHub Pages.
 
-### `npm start`
+## Scrum
+Du ska arbeta agilt enligt Scrum. Detta innebär: 
+Sprintplanering med daily stand-ups (där du formulerar för dig själv vad du har gjort sedan sist, vad du ska göra under dagen och om det finns någonting som hindrar dig - varje dag du arbetar med projektet)
+Sprint review på torsdagar med läraren
+Sprint retrospective. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Under kursen har du sprint review och handledningstid - se schemat. De dagar som det är sprint review ska du presentera för läraren vad du har gjort under sprinten.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## UX-design
+Du ska utgå ifrån Design Thinking Process med Empathize, Define, Ideate, Prototype och Test. Tillverka en persona för antingen restaurangens kunder eller anställda, det vill säga två olika användare med varierande behov. Du ska använda "mobile first" när du producerar dina prototyper, dvs först göra en mobilanpassad layout, och sedan en som är anpassad för bredare skärmar.
 
-### `npm test`
+## Git och GitHub
+Projektet ska publiceras med ett publikt repo på GitHub. Hemligheter (eventuella lösenord och kontouppgifter) ska lagras i .env-filer och inte versionshanteras. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Frontend
+Appens frontend ska byggas i React med Sass och evt. TypeScript. Planera projektet så att du kan börja koda frontend innan du har en fungerande backend. Du kommer att behöva skapa realistisk testdata. (ChatGPT är bra på att hjälpa till med det.)
 
-### `npm run build`
+## Backend
+Appens backend ska använda antingen AWS eller Node.js samt Express som webbserver. Använder du AWS så kan du använda serverless framework, Lambda, API Gateway, DynamoDB, S3 bucket.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+När du har satt upp en plan för din backend arkitektur bokas tid för handledning. 
+Publicering
+Appen ska publiceras online med någon molntjänst, till exempel Github pages. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Slutredovisning
+Projektet ska presenteras för klassen torsdag 14/12. Tänk på att du ska förbereda presentationen. Använd gärna stödord eller manus så att du kommer ihåg vad du ska gå igenom och det flyter på bra.
+Demonstrera appen ur bägge användares perspektiv
+Berätta om din designprocess och ditt agila arbetssätt.
+Demonstrera alla funktioner som ingår i kravspecen ovan
+Redovisningen ska ta max 15 minuter
+Var beredda på frågor från publiken, till exempel att visa kod eller förklara någon del lite mer ingående 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Kom ihåg att du även ska lämna in en individuell analys!

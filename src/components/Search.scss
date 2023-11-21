@@ -1,0 +1,44 @@
+// Search.scss
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-container {
+    display: flex;
+    margin: 3rem 0 -5rem 0;
+  
+    input[type="text"] {
+        width: 60rem;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+  
+    button {
+      background-color: var(--btn-color);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+  
+  // Media Query for smaller screens
+  @media screen and (max-width: 768px) {
+    .search-container input[type=text] {
+        width: 15rem; /* Set maximum width */
+    
+      }
+    
+  }
+  
