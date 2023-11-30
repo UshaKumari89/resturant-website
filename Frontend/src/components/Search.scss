@@ -1,0 +1,58 @@
+@import '../var.scss' ;
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: calc(100% - 40px); 
+  border: 3px solid var(--btn-color);
+  border-right: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: var(--text-color)
+}
+
+.searchTerm:focus {
+  color: var(--bg-color);
+  font-size: 1rem;
+}
+
+.searchButton {
+  width: 40px;
+  height: 52px;
+  border:var(--btn-color);
+  background:var(--btn-color);
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.searchIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  margin: 1.7rem  auto;
+}
+
+.wrap {
+  width: 600px;
+  margin: 5rem auto;
+  position: relative; /* Changed position to relative */
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    width: 350px;
+  
+  }
+  
+
+}

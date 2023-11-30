@@ -1,0 +1,34 @@
+@import '../var.scss';
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+
+}
+.categories{
+  display: flex;
+  justify-content: space-around;
+  margin:6rem 0 2rem;
+  color:var(--btn-color);
+  font-size: 1.4rem;
+
+
+}
+
+// .selectedCategory:active{
+//  text-decoration: underline;
+
+// }
+
+.itemsByCategory{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+hr{
+
+  width: 100%;
+}
