@@ -2,6 +2,7 @@ import { React, useState } from "react";
 
 import "./SignUp.scss";
 import "./Login";
+import avatarImage from '../images/avtar.jpg';
 
 const SignUp = () => {
   const [credentionals, setcredentionals] = useState({
@@ -10,40 +11,11 @@ const SignUp = () => {
     password: "",
     number: "",
   });
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       const response = await fetch("http://localhost:5500/api/createuser", {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({
-//           name: credentionals.name,
-//           email: credentionals.email,
-//           password: credentionals.password,
-//           number: credentionals.number,
-//         }),
-//       });
-
-//       if (!response.ok) {
-//         throw new Error("Network response was not ok.");
-//       }
-
-//       const json = await response.json();
-//       console.log(json);
-
-//       if (!json.success) {
-//         alert("Enter valid credentials");
-//       }
-//     } catch (error) {
-//       console.error("Error:", error);
-//       alert("Error occurred. Please check console for details.");
-//     }
-//   };
-const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      console.log('Data to be sent:', credentionals); // Log the data before sending
+  
       const response = await fetch("http://localhost:5500/api/createuser", {
         method: "POST",
         headers: {
@@ -62,12 +34,12 @@ const handleSubmit = async (e) => {
       }
   
       const json = await response.json();
-      console.log(json);
+      console.log('Response from server:', json); // Log the response from the server
   
       if (!json.success) {
         alert("Enter valid credentials");
       } else {
-        // Reset the input fields after successful submission
+        console.log('User created successfully:', json); // Log success message or user data
         setcredentionals({
           name: "",
           email: "",
@@ -96,6 +68,7 @@ const handleSubmit = async (e) => {
           {/* <span>
             Already have an account? <a href="login">Log In</a>
           </span> */}
+           <img src={avatarImage} alt="loginImage" className="image"/>
         </div>
         <div className="form">
           <form action="/register" method="post" onSubmit={handleSubmit}>
@@ -131,8 +104,8 @@ const handleSubmit = async (e) => {
               value={credentionals.number}
               onChange={onChange}
             />
-            <button>Submit</button>
-           <button><a href="login">Log In</a></button>
+           <button  type="submit"><a href="/login">Sign Up</a></button>
+           <button ><a href="login">Log In</a></button>
           </form>
 
         </div>

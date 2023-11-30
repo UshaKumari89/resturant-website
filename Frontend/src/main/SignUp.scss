@@ -8,7 +8,13 @@
     justify-content: center;
     color:rgb(20, 19, 19)
   }
-  
+  .image{
+ border-radius: 50%;
+    height:10rem;
+    width: 10rem;
+    border:3px solid white;
+    padding: 10px;
+  }
   .signupCard{
     border-radius: 10px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);

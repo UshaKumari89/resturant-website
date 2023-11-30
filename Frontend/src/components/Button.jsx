@@ -1,14 +1,16 @@
-import React from 'react';
-import { FaShoppingCart } from 'react-icons/fa'; 
-import './Button.scss'
+// import React from 'react';
+// import { FaShoppingCart } from 'react-icons/fa'; 
+// import './Button.scss'
 
-const Button = ({ onClick }) => {
-  return (
-    <button className="button" onClick={onClick}>
-      <FaShoppingCart className="cart-icon" />
+// const Button = ({ onClick }) => {
+//   return (
+//     <button className="button" onClick={onClick}>
+//       <FaShoppingCart className="cart-icon" />
 
-    </button>
-  );
-};
+//     </button>
+//   );
+// };
 
-export default Button;
+// export default Button;
+// //ram@hotmail.com
+// //8888888

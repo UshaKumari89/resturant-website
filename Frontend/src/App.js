@@ -3,9 +3,12 @@ import Home from './main/Home';
 import Login from './main/Login';
 import AboutUs from './main/AboutUs';
 import SignUp from './main/SignUp';
+import  { CartProvider } from './components/ContextReducer'
 
 const App = () => {
   return (
+<CartProvider>
+
     <Router>
       <div className="app">
        
@@ -17,6 +20,7 @@ const App = () => {
         </Routes>
       </div>
     </Router>
+    </CartProvider>
   );
 };
 

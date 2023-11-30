@@ -1,49 +1,77 @@
-import React, { useState } from "react";
+import React, {useState, useRef, useEffect} from "react";
 import "./Card.scss";
-import Button from "./Button";
+import { FaShoppingCart } from "react-icons/fa";
+import {useDispactchCart, useCart} from './ContextReducer'
 
-const Card = () => {
-  const [size, setSize] = useState("medium"); // Default size
 
-  const handleSizeChange = (e) => {
-    setSize(e.target.value);
+
+const Card = (props) => {
+  //  const { itemName, itemImage, itemPrice, itemOption } = props;
+  let priceOptions = Object.keys( props.options || []); 
+  
+  let data = useCart()
+  let dispatch = useDispactchCart()
+  const [quantity, setQuantity] = useState(1)
+  const [size, setSize] = useState('')
+  const priceRef = useRef()
+  
+
+  const handleAddToCart = async () => {
+    console.log("Adding to cart:", {
+      id: props.foodItem._id,
+      name: props.foodItem.name,
+      price: finalPrice,
+      quantity: quantity,
+      size: size,
+    });
+  
+    await dispatch({
+      type: 'ADD',
+      id: props.foodItem._id,
+      name: props.foodItem.name,
+      price: finalPrice,
+      quantity: quantity,
+      size: size,
+    });
+  
+    console.log("Cart after adding:", data);
   };
+  
+ let finalPrice = quantity * parseInt(props.options[size])
 
-  // Replace these placeholder values with your actual data
-  const title = "Product Title";
-  const imageUrl = "https://placekitten.com/200/300"; // Replace with your image URL
-  const description = "Product description goes here";
-  const price = 10; // Replace with your actual price
+ useEffect(()=>{
+  setSize(priceRef.current.value)
+ }, [])
 
   return (
     <div className="card">
-      <h2>{title}</h2>
-      <img src={imageUrl} alt={title} />
-      <p>{description}</p>
+      <img src={props.foodItem.img} alt={props.foodItem.name} /> 
+      <h2>{props.foodItem.name}</h2>
 
       <div className="options">
-          <p>Price: ${price}</p>
-        <select id="size" value={size} onChange={handleSizeChange}>
-       
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
+        <p>${finalPrice}</p>
+        <select id="size" ref= {priceRef} onChange ={(e) => setSize(e.target.value)}>
+          {priceOptions.map((data) => (
+            <option key={data} value={data}>
+              {data}
+            </option>
+          ))}
         </select>
 
-        <select id="quantity">
-          {Array.from(Array(6), (e, i) => {
-            return (
-              <option key={i + 1} value={i + 1}>
-                {" "}
-                {i + 1}{" "}
-              </option>
-            );
-          })}
+        <select id="quantity" onChange ={(e) => setQuantity(e.target.value)}>
+          {Array.from(Array(6), (e, i) => (
+            <option key={i + 1} value={i + 1}>
+              {i + 1}
+            </option>
+          ))}
         </select>
-      <Button/> 
+      
+        <button className="button" onClick={handleAddToCart}>
+          <FaShoppingCart className="cart-icon" />
+        </button>
       </div>
-    </div>
+      </div>
   );
 };
-
+ 
 export default Card;
