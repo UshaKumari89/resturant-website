@@ -6,9 +6,9 @@ const cartDispatchContext = createContext()
 
 const initialState = {
     items: [],
-    // other cart-related properties
+   
   };
-  
+
   const reducer = (state, action) => {
     switch (action.type) {
       case 'ADD':
@@ -26,11 +26,37 @@ const initialState = {
             },
           ],
         };
-      // Other cases for different actions
-  
+
+        case 'UPDATE':
+          const updatedItems = state.items.map((item) => {
+            if (item.id === action.id) {
+              const updatedQuantity = action.quantity;
+              const pricePerItem = item.price / item.quantity; 
+              const updatedPrice = updatedQuantity * pricePerItem; 
+              return {
+                ...item,
+                quantity: updatedQuantity,
+                price: updatedPrice, 
+              };
+            }
+            return item;
+          });
+          return {
+            ...state,
+            items: updatedItems,
+          };
+          case "DROP":
+            let empArray = []
+            return empArray;
+      case 'REMOVE':
+        const filteredItems = state.items.filter((item, index) => index !== action.index);
+        return {
+          ...state,
+          items: filteredItems,
+        };
       default:
         console.log('Error in reducer');
-        return state; // Ensure you return the state for unhandled actions
+        return state;
     }
   };
   
@@ -49,4 +75,4 @@ return(
 
 export const useCart = () => useContext(cartStateContext);
 
-export  const useDispactchCart  = () =>useContext(cartDispatchContext)
+export const useDispatchCart  = () =>useContext(cartDispatchContext)

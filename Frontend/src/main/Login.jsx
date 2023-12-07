@@ -1,6 +1,5 @@
 import { useState, }from 'react';
 import { useNavigate, Link  } from 'react-router-dom';
-import './logIn.scss';
 import avatarImage from '../images/avtar.jpg';
 
 function Login() {
@@ -23,30 +22,30 @@ function Login() {
       });
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error('Authentication failed. Invalid credentials.');
       }
 
       const json = await response.json();
       if (!json.success) {
         alert('Enter valid credentials');
       } else {
-        // Simulate successful login after 1 second
         setTimeout(() => {
           setIsLoggedIn(true);
           setCredentials({
             email: '',
             password: '',
           });
+          localStorage.setItem('userEmail', credentials.email)
           localStorage.setItem('autToken', json.authToken);
           console.log('Stored autToken:', localStorage.getItem('autToken'));
           navigate('/');
         }, 1000);
       }
     } catch (error) {
-      console.error('Login Error:', error);
       alert('Error occurred. Please check console for details.');
+      console.error('Login Error:', error.message);
     }
-  };
+  }
 
   const onChange = (event) => {
     setCredentials({
@@ -97,7 +96,4 @@ function Login() {
     </div>
   );
 }
- 
-
-
-export default Login;
+ export default Login;

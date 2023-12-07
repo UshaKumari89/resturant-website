@@ -47,7 +47,7 @@ const validateInfo = [
 
 router.post('/login', validateInfo, async (req, res) => {
   const { email, password } = req.body;
-  //console.log('Received credentials:', { email, password });
+  console.log('Received credentials:', { email, password });
 
   const errors = validationResult(req);
   if (!errors.isEmpty()) {

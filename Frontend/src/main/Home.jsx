@@ -7,13 +7,16 @@ import "./Home.scss";
 import Carousel from "../components/Carousal";
 import image1 from "../images/img_1.jpg";
 import image2 from "../images/img_2.jpg";
+import image3 from "../images/img3.jpeg";
+import image4 from "../images/img.webp";
+
 import Search from "../components/Search";
 import Card from '../components/Card';
 
 
 
 function Home() {
-  let images = [image1, image2];
+  let images = [image1, image2, image3, image4];
 
   const [foodItem, setFoodItem] = useState([]);
   const [foodCategory, setFoodCategory] = useState([]);
@@ -77,7 +80,7 @@ function Home() {
   return (
     <>
       <Nav />
-      <Carousel images={images} />
+      <Carousel images={images} className = 'img'/>
       <Search foodItems={foodItem}  onSearch={handleSearch} />
       <div className="categories">
         <div onClick={handleShowWholeMenu}>Menu</div>

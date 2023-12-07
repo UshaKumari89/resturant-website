@@ -1,0 +1,44 @@
+// MyOrder.scss
+@import "../var.scss";
+.container-history {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  justify-content: space-around;
+
+  .order-item {
+  border: 1px solid white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-title {
+      font-size: 1.8em; 
+      margin: -.2rem;
+      color: var(--heading-color);
+    }
+
+    .item-details p {
+      display: flex;
+      flex-direction: column;
+      color: var(--heading-color);
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .order-item {
+  width: 300px !important;
+     
+  }
+}

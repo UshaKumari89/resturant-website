@@ -11,9 +11,7 @@ const Search = ({ foodItems, onSearch }) => {
     setSearchQuery(query);
     onSearch(query);
   };
-
-  
-  return (
+return (
     <div className="wrap">
       <div className="search">
         <input
@@ -21,7 +19,6 @@ const Search = ({ foodItems, onSearch }) => {
           className="searchTerm"
           placeholder="What are you looking for?"
           value={searchQuery}
-          // onChange={handleInputChange}
           onChange={(event) => handleInputChange(event)}
         />
         <button type="submit" className="searchButton">

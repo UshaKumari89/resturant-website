@@ -45,10 +45,10 @@
       width: 80px;
       height: 30px;
       background-color:var(--btn-color);
-      transition: background-color 0.3s ease; /* Smooth transition */
+      transition: background-color 0.3s ease; 
 
       &:focus {
-        outline: none; /* Remove default focus outline */
+        outline: none;
       }
     }
 

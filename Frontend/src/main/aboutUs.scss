@@ -1,15 +1,19 @@
-@import '../var.scss' ;
+@import "../var.scss";
 
-.aboutUsHeading{
-text-align: center;
-color:var(--text-color);
-font-size: 2rem;
+.aboutUsHeading {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 2rem;
 }
+.aboutusDesc {
+  color: var(--text-color);
+  padding: 0rem 5rem;
+  text-align: justify;
+}
+@media (max-width: 768px) {
+  .aboutusDesc {
 
-.aboutusDesc{
-color:var(--text-color);
-padding: 0rem 5rem;
-text-align: justify;
-
-
+    padding: 0rem 2rem;
+   
+  }
 }
