@@ -28,10 +28,10 @@ export default function Modal({ children, onClose }) {
     <>
       <div style={OVERLAY_STYLES} />
       <div style={MODAL_STYLES}>
-        <button className='btn bg-danger fs-4' style={{ marginLeft: "90%", marginTop: "-35px" }} onClick={onClose}> X </button>
+        <button className='btn bg-danger fs-4' style={{ marginLeft: "90%", marginTop: "30px" }} onClick={onClose}> X </button>
         {children}
       </div>
     </>,
-    document.getElementById('cart-root')
+    document.getElementById('cartRoot')
   )
 }

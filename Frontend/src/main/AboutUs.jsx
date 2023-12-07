@@ -1,8 +1,13 @@
 import React from "react";
 import "./aboutUs.scss";
-
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 function AboutUs() {
   return (
+    <>
+     <div>
+     <Nav/>
+     </div>
     <div className="aboutUs">
       <h2 className="aboutUsHeading"> Welcome to Spice and Slice!</h2>
       <section className="aboutusDesc">
@@ -57,6 +62,12 @@ function AboutUs() {
           define us.</p>
       </section>
     </div>
+
+     
+<div>
+<Footer/>
+</div>
+</>
   );
 }
 
