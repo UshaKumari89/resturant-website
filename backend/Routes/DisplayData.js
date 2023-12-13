@@ -13,7 +13,7 @@ router.post('/foodData', (req, res) => {
             throw new Error('Food items or categories not available');
         }
     } catch (error) {
-        //console.error(error.message);
+        console.error(error.message);
         res.status(500).send('Server error');
     }
 });
