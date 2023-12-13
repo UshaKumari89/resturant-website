@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/UshaKumari89/resturant-website/static/css/main.e2a6d7a1.css",
+    "main.js": "/UshaKumari89/resturant-website/static/js/main.179b4092.js",
+    "static/js/787.cefe34ed.chunk.js": "/UshaKumari89/resturant-website/static/js/787.cefe34ed.chunk.js",
+    "static/media/img_1.jpg": "/UshaKumari89/resturant-website/static/media/img_1.077a1087aa39b1034988.jpg",
+    "static/media/img_2.jpg": "/UshaKumari89/resturant-website/static/media/img_2.8292aaf6372a3c32868d.jpg",
+    "static/media/img.webp": "/UshaKumari89/resturant-website/static/media/img.523b05f724c7a3146ba5.webp",
+    "static/media/img3.jpeg": "/UshaKumari89/resturant-website/static/media/img3.f667ec3b0e9525977aca.jpeg",
+    "index.html": "/UshaKumari89/resturant-website/index.html",
+    "main.e2a6d7a1.css.map": "/UshaKumari89/resturant-website/static/css/main.e2a6d7a1.css.map",
+    "main.179b4092.js.map": "/UshaKumari89/resturant-website/static/js/main.179b4092.js.map",
+    "787.cefe34ed.chunk.js.map": "/UshaKumari89/resturant-website/static/js/787.cefe34ed.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2a6d7a1.css",
+    "static/js/main.179b4092.js"
+  ]
+}
