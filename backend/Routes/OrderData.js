@@ -2,47 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Order = require('../models/Orders');
 
-// router.post('/orderData', async (req, res) => {
-//     console.log('Received request body:', req.body);
-
-//     // Accessing the 'items' array directly from 'order_data' object
-//     let data = Array.isArray(req.body.order_data?.items) ? req.body.order_data.items : [];
-
-//     // Checking if Order_date is present before adding it to each data item
-//     if (req.body.order_date) {
-//         data = data.map(item => ({ ...item, Order_date: req.body.order_date }));
-//     }
-
-//     console.log('Formed data:', data);
-
-//     // Check if email exists in the database
-//     let eId = await Order.findOne({ 'email': req.body.email });
-
-//     if (eId === null) {
-//         try {
-//             await Order.create({
-//                 email: req.body.email,
-//                 order_data: data
-//             });
-//             res.json({ success: true });
-//         } catch (error) {
-//             console.log(error.message);
-//             res.status(500).send("Server Error");
-//         }
-//     } else {
-//         try {
-//             await Order.findOneAndUpdate(
-//                 { email: req.body.email },
-//                 { $push: { order_data: data } }
-//             );
-//             res.json({ success: true });
-//         } catch (error) {
-//             console.log(error.message);
-//             res.status(500).send("Server Error");
-//         }
-//     }
-// });
-
 router.post('/orderData', async (req, res) => {
     console.log('Received request body:', req.body);
 

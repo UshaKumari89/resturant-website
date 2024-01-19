@@ -9,7 +9,7 @@ function MyOrder() {
 
   const fetchMyOrder = async () => {
     try {
-      const response = await fetch("http://localhost:5500/api/myOrderData", {
+      const response = await fetch("https://resturant-website-2036.onrender.com/api/myOrderData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -19,7 +19,7 @@ function MyOrder() {
         }),
       });
       const data = await response.json();
-      console.log("Fetched data:", data);
+      //console.log("Fetched data:", data);
 
       if (data && data.orderData) {
         setOrderData(data.orderData);

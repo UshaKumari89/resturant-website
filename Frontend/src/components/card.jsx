@@ -26,11 +26,11 @@ const Card = (props) => {
       );
   
       let updatedQuantity = parseInt(quantity);
-       let updatedPrice = parseInt(props.foodItem.price) * updatedQuantity;
+      //  let updatedPrice = parseInt(props.foodItem.price) * updatedQuantity;
   
       if (existingItem) {
         updatedQuantity += parseInt(existingItem.quantity);
-        updatedPrice = parseInt(props.foodItem.price) * updatedQuantity;
+        // updatedPrice = parseInt(props.foodItem.price) * updatedQuantity;
       }
   
       let finalPrice = quantity * priceFromOptions;

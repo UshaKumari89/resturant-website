@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const user = require('../models/Users');
 const { body, validationResult } = require('express-validator');
-const jwt = require('jsonwebtoken'); // Importing the jsonwebtoken library
+const jwt = require('jsonwebtoken'); 
 
 const bcrypt = require('bcryptjs');
 const jwtsecret = "mySecretKey123";
@@ -61,7 +61,7 @@ router.post('/login', validateInfo, async (req, res) => {
       return res.status(401).json({ success: false, message: 'Invalid email' });
     }
 
-    const pwdComapre = await bcrypt.compare(password, existingUser.password); // Using 'password' directly instead of req.body.password
+    const pwdComapre = await bcrypt.compare(password, existingUser.password); 
 
     if (pwdComapre) {
       const data = {
@@ -69,8 +69,8 @@ router.post('/login', validateInfo, async (req, res) => {
           id: existingUser.id
         }
       };
-      const authToken = jwt.sign(data, jwtsecret); // Generating the authentication token
-      return res.status(200).json({ success: true, message: 'Login successful', authToken }); // Sending the token in the response
+      const authToken = jwt.sign(data, jwtsecret); 
+      return res.status(200).json({ success: true, message: 'Login successful', authToken }); 
     } else {
       return res.status(401).json({ success: false, message: 'Password is not correct!!' });
     }
