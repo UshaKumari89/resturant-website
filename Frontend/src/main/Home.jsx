@@ -14,7 +14,6 @@ import Search from "../components/Search";
 import Card from '../components/Card';
 
 
-
 function Home() {
   let images = [image1, image2, image3, image4];
 
@@ -27,7 +26,7 @@ function Home() {
 
   const loadData = async () => {
     try {
-      let response = await fetch("http://localhost:5500/api/foodData", {
+      let response = await fetch("https://resturant-website-2036.onrender.com/api/foodData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

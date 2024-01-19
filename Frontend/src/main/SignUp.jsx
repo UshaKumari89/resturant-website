@@ -16,7 +16,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5500/api/createuser", {
+      const response = await fetch("https://resturant-website-2036.onrender.com/api/createuser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -35,7 +35,7 @@ const SignUp = () => {
         alert("Enter valid credentials");
       } else {
         // If user creation successful, perform automatic login
-        const loginResponse = await fetch("http://localhost:5500/api/login", {
+        const loginResponse = await fetch("https://resturant-website-2036.onrender.com//api/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
